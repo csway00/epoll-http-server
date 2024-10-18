@@ -1,38 +1,30 @@
 # epollHttpServer
 
 #### 介绍
-实现一个简单的 Web 服务器 myhttp。能够给浏览器提供服务，供用户借助浏览器访
-问服务器主机中的文件。
+在`Linux`下用C语言实现一个简单的 Web 服务器 myhttp。能够给浏览器提供服务，供用户借助浏览器访问服务器主机中的文件。
+
+![image-20241018110902562](README.assets/image-20241018110902562.png)
 
 #### 软件架构
-软件架构说明
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+C，epoll
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 修改`epollHttpServer.c` 中`#define SERV_PORT 9999`，改成自己需要的
 
-#### 参与贡献
+   ![image-20241018104424960](README.assets/image-20241018104424960.png)
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+2. 修改`epollHttpServer.c` 中`#define MY_DIR "/home/b/dir"`，改成自己的目录，建议用绝对路径
 
+   ![image-20241018104424960](README.assets/image-20241018104424960-1729219643680-8.png)
 
-#### 特技
+3. 打开linux终端， 切换到当前目录，然后输入`make`, 回车, 就会在当前目录生成一个`server`的文件
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+4. 在当前目录输入`./server`, 即可运行服务器程序
+
+5. 在浏览器打开对应的地址: `Linux的ip地址:上面设置的端口号`，如`127.0.0.1:9999`即可访问。
+
+   ![image-20241018110829270](README.assets/image-20241018110829270.png)
+
+   
